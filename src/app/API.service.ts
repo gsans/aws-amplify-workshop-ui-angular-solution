@@ -287,7 +287,9 @@ export class APIService {
   }
   OnCreateRestaurantListener: Observable<
     OnCreateRestaurantSubscription
-  > = API.graphql(graphqlOperation(`subscription OnCreateRestaurant {
+  > = API.graphql(
+    graphqlOperation(
+      `subscription OnCreateRestaurant {
         onCreateRestaurant {
           __typename
           id
@@ -298,11 +300,15 @@ export class APIService {
           createdAt
           updatedAt
         }
-      }`)) as unknown as Observable<OnCreateRestaurantSubscription>;
+      }`
+    )
+  ) as Observable<OnCreateRestaurantSubscription>;
 
   OnUpdateRestaurantListener: Observable<
     OnUpdateRestaurantSubscription
-  > = API.graphql(graphqlOperation(`subscription OnUpdateRestaurant {
+  > = API.graphql(
+    graphqlOperation(
+      `subscription OnUpdateRestaurant {
         onUpdateRestaurant {
           __typename
           id
@@ -313,11 +319,15 @@ export class APIService {
           createdAt
           updatedAt
         }
-      }`)) as unknown as Observable<OnUpdateRestaurantSubscription>;
+      }`
+    )
+  ) as Observable<OnUpdateRestaurantSubscription>;
 
   OnDeleteRestaurantListener: Observable<
     OnDeleteRestaurantSubscription
-  > = API.graphql(graphqlOperation(`subscription OnDeleteRestaurant {
+  > = API.graphql(
+    graphqlOperation(
+      `subscription OnDeleteRestaurant {
         onDeleteRestaurant {
           __typename
           id
@@ -328,5 +338,7 @@ export class APIService {
           createdAt
           updatedAt
         }
-      }`)) as unknown as Observable<OnDeleteRestaurantSubscription>;
+      }`
+    )
+  ) as Observable<OnDeleteRestaurantSubscription>;
 }
