@@ -6,7 +6,6 @@ import PubSub from '@aws-amplify/pubsub';
 import { APIService } from '../API.service';
 import { Restaurant } from './../types/restaurant';
 
-import * as Observable from 'zen-observable';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -46,7 +45,6 @@ export class HomeComponent implements OnInit {
       this.restaurants = [newRestaurant, ...this.restaurants];
     });
     this.api.OnDeleteRestaurantListener.subscribe( (event: any) => {
-      debugger;
       const deletedRestaurant = event.value.data.onDeleteRestaurant
       if (deletedRestaurant) {
         this.restaurants = this.restaurants.filter((r) => r.id != deletedRestaurant.id);
@@ -65,7 +63,6 @@ export class HomeComponent implements OnInit {
   }
 
   public onDelete(restaurant: any) {
-    debugger;
     const { id } = restaurant;
     const r = { id };
     this.api.DeleteRestaurant(r).then(event => {
