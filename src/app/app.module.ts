@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
@@ -17,13 +17,11 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AmplifyAngularModule,
+    AmplifyUIAngularModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [
-    AmplifyService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AmplifyService } from 'aws-amplify-angular';
 import Auth from '@aws-amplify/auth';
+import API from '@aws-amplify/api';
 import PubSub from '@aws-amplify/pubsub';
 
 import { APIService } from '../API.service';
@@ -10,7 +10,7 @@ import * as Observable from 'zen-observable';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-home', 
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   public createForm: FormGroup;
 
   constructor(
-    public api: APIService,
+    private api: APIService,
     private fb: FormBuilder
   ) {
     Auth.currentAuthenticatedUser().then(console.log)

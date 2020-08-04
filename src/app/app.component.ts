@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AmplifyService } from 'aws-amplify-angular';
+import Auth from '@aws-amplify/auth';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { AmplifyService } from 'aws-amplify-angular';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public amplify: AmplifyService) {
-    amplify.auth().currentAuthenticatedUser().then(console.log)
+  constructor() {  
+    Auth.currentAuthenticatedUser().then(console.log);
   }
 }
