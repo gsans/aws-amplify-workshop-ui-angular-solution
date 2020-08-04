@@ -6,6 +6,8 @@ subscription OnCreateRestaurant {
     name
     description
     city
+    createdAt
+    updatedAt
   }
 }
 subscription OnUpdateRestaurant {
@@ -15,6 +17,8 @@ subscription OnUpdateRestaurant {
     name
     description
     city
+    createdAt
+    updatedAt
   }
 }
 subscription OnDeleteRestaurant {
@@ -24,5 +28,7 @@ subscription OnDeleteRestaurant {
     name
     description
     city
+    createdAt
+    updatedAt
   }
 }

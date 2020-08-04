@@ -6,6 +6,8 @@ mutation CreateRestaurant($input: CreateRestaurantInput!) {
     name
     description
     city
+    createdAt
+    updatedAt
   }
 }
 mutation UpdateRestaurant($input: UpdateRestaurantInput!) {
@@ -15,6 +17,8 @@ mutation UpdateRestaurant($input: UpdateRestaurantInput!) {
     name
     description
     city
+    createdAt
+    updatedAt
   }
 }
 mutation DeleteRestaurant($input: DeleteRestaurantInput!) {
@@ -24,5 +28,7 @@ mutation DeleteRestaurant($input: DeleteRestaurantInput!) {
     name
     description
     city
+    createdAt
+    updatedAt
   }
 }

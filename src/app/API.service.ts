@@ -1,9 +1,10 @@
 /* tslint:disable */
+/* eslint-disable */
 //  This file was automatically generated and should not be edited.
 import { Injectable } from "@angular/core";
 import API, { graphqlOperation } from "@aws-amplify/api";
 import { GraphQLResult } from "@aws-amplify/api/lib/types";
-import * as Observable from "zen-observable";
+import { Observable } from "zen-observable-ts";
 
 export type CreateRestaurantInput = {
   id?: string | null;
@@ -69,6 +70,8 @@ export type CreateRestaurantMutation = {
   name: string;
   description: string;
   city: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type UpdateRestaurantMutation = {
@@ -78,6 +81,8 @@ export type UpdateRestaurantMutation = {
   name: string;
   description: string;
   city: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type DeleteRestaurantMutation = {
@@ -87,6 +92,8 @@ export type DeleteRestaurantMutation = {
   name: string;
   description: string;
   city: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type GetRestaurantQuery = {
@@ -96,6 +103,8 @@ export type GetRestaurantQuery = {
   name: string;
   description: string;
   city: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type ListRestaurantsQuery = {
@@ -107,6 +116,8 @@ export type ListRestaurantsQuery = {
     name: string;
     description: string;
     city: string;
+    createdAt: string;
+    updatedAt: string;
   } | null> | null;
   nextToken: string | null;
 };
@@ -118,6 +129,8 @@ export type OnCreateRestaurantSubscription = {
   name: string;
   description: string;
   city: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type OnUpdateRestaurantSubscription = {
@@ -127,6 +140,8 @@ export type OnUpdateRestaurantSubscription = {
   name: string;
   description: string;
   city: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type OnDeleteRestaurantSubscription = {
@@ -136,6 +151,8 @@ export type OnDeleteRestaurantSubscription = {
   name: string;
   description: string;
   city: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 @Injectable({
@@ -153,6 +170,8 @@ export class APIService {
           name
           description
           city
+          createdAt
+          updatedAt
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -174,6 +193,8 @@ export class APIService {
           name
           description
           city
+          createdAt
+          updatedAt
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -195,6 +216,8 @@ export class APIService {
           name
           description
           city
+          createdAt
+          updatedAt
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -214,6 +237,8 @@ export class APIService {
           name
           description
           city
+          createdAt
+          updatedAt
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -239,6 +264,8 @@ export class APIService {
             name
             description
             city
+            createdAt
+            updatedAt
           }
           nextToken
         }
@@ -260,9 +287,7 @@ export class APIService {
   }
   OnCreateRestaurantListener: Observable<
     OnCreateRestaurantSubscription
-  > = API.graphql(
-    graphqlOperation(
-      `subscription OnCreateRestaurant {
+  > = API.graphql(graphqlOperation(`subscription OnCreateRestaurant {
         onCreateRestaurant {
           __typename
           id
@@ -270,16 +295,14 @@ export class APIService {
           name
           description
           city
+          createdAt
+          updatedAt
         }
-      }`
-    )
-  ) as Observable<OnCreateRestaurantSubscription>;
+      }`)) as unknown as Observable<OnCreateRestaurantSubscription>;
 
   OnUpdateRestaurantListener: Observable<
     OnUpdateRestaurantSubscription
-  > = API.graphql(
-    graphqlOperation(
-      `subscription OnUpdateRestaurant {
+  > = API.graphql(graphqlOperation(`subscription OnUpdateRestaurant {
         onUpdateRestaurant {
           __typename
           id
@@ -287,16 +310,14 @@ export class APIService {
           name
           description
           city
+          createdAt
+          updatedAt
         }
-      }`
-    )
-  ) as Observable<OnUpdateRestaurantSubscription>;
+      }`)) as unknown as Observable<OnUpdateRestaurantSubscription>;
 
   OnDeleteRestaurantListener: Observable<
     OnDeleteRestaurantSubscription
-  > = API.graphql(
-    graphqlOperation(
-      `subscription OnDeleteRestaurant {
+  > = API.graphql(graphqlOperation(`subscription OnDeleteRestaurant {
         onDeleteRestaurant {
           __typename
           id
@@ -304,8 +325,8 @@ export class APIService {
           name
           description
           city
+          createdAt
+          updatedAt
         }
-      }`
-    )
-  ) as Observable<OnDeleteRestaurantSubscription>;
+      }`)) as unknown as Observable<OnDeleteRestaurantSubscription>;
 }
