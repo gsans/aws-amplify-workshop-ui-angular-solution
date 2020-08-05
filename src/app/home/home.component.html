@@ -20,9 +20,9 @@
     <div class="card-container">
       <div class="card" *ngFor="let restaurant of restaurants">
         <div class="remove"><button (click)='onDelete(restaurant)' class='button'>Delete</button></div>
-        <div class="name">{{ restaurant.city }}</div>
-        <div class="price">{{ restaurant.name }}</div>
-        <div class="symbol">{{ restaurant.description }}</div>
+        <div class="city">{{ restaurant.city }}</div>
+        <div class="name">{{ restaurant.name }}</div>
+        <div class="description">{{ restaurant.description }}</div>
       </div>
     </div>
   </div>

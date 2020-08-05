@@ -151,16 +151,17 @@ input {
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
 }
 
-.name {
+.city {
   font-style: italic;
 }
-.symbol {
-  color: #999;
-}
-.price {
+.name {
   font-weight: bold;
   font-size: 2em;
 }
+.description {
+  color: #999;
+}
+
 
 .navigation {
   display: flex;
