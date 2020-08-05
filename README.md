@@ -25,7 +25,7 @@ The Amplify Console will fork this repo in your GitHub account, and then build a
   amplify init --app https://github.com/gsans/aws-amplify-workshop-ui-angular-solution
 ```
   
->The init command clones the GitHub repo, initializes the CLI, creates a ‘sampledev’ environment in CLI, detects and adds categories, provisions the backend, pushes the changes to the cloud, and starts the app.
+>The init command clones the GitHub repo, initializes the CLI, creates a ‘devone’ environment in CLI, detects and adds categories, provisions the backend, pushes the changes to the cloud, and starts the app.
 
 3. Provisioning the frontend and backend
 
