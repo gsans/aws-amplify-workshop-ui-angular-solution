@@ -9,13 +9,13 @@ import { onAuthUIStateChange, CognitoUserInterface, AuthState } from '@aws-ampli
 })
 export class LoginComponent implements OnInit, OnDestroy {
   user: CognitoUserInterface | undefined;
-  authState: AuthState;
+  signedIn: boolean;
 
   constructor(private ref: ChangeDetectorRef) {}
 
   ngOnInit() {
     onAuthUIStateChange((authState, authData) => {
-      this.authState = authState;
+      this.signedIn = authState === AuthState.SignedIn;
       this.user = authData as CognitoUserInterface;
       this.ref.detectChanges();
     })
